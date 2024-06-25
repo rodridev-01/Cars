@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Créditos - Vehículo Nuevo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simulador de Créditos - Vehículo Nuevo</h1>
+    <form id="creditoForm" class="form">
+      <div class="form-group">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca" required>
+          <option value="">Seleccione una marca</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+          <option value="Ford">Ford</option>
+          <option value="Chevrolet">Chevrolet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="valor">Valor del vehículo:</label>
+        <input type="number" id="valor" name="valor" required>
+      </div>
+      <div class="form-group">
+        <label for="cuotaInicial">Cuota inicial:</label>
+        <input type="number" id="cuotaInicial" name="cuotaInicial" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaDesembolso">Fecha de desembolso:</label>
+        <input type="date" id="fechaDesembolso" name="fechaDesembolso" required>
+      </div>
+      <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <select id="modelo" name="modelo" required>
+          <option value="">Seleccione un modelo</option>
+          <option value="Sedán">Sedán</option>
+          <option value="Camioneta">Camioneta</option>
+          <option value="Hatchback">Hatchback</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nroCuotas">Número de cuotas:</label>
+        <select id="nroCuotas" name="nroCuotas" required>
+          <option value="">Seleccione el número de cuotas</option>
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="periodoGracia">Periodo de gracia:</label>
+        <select id="periodoGracia" name="periodoGracia" required>
+          <option value="0">Sin período de gracia</option>
+          <option value="1">1 mes</option>
+          <option value="2">2 meses</option>
+          <option value="3">3 meses</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="seguro">Seguro:</label>
+        <select id="seguro" name="seguro" required>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <button type="submit">Calcular Cronograma de Pagos</button>
+    </form>
+
+    <div id="cronogramaContainer" class="cronograma-container" style="display: none;">
+      <h2>Cronograma de Pagos</h2>
+      <table id="cronogramaTable">
+        <thead>
+          <tr>
+            <th>Número de Cuota</th>
+            <th>Monto de Cuota</th>
+            <th>Interés</th>
+            <th>Seguro</th>
+            <th>Total Cuota</th>
+            <th>Fecha de Pago</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="totals">
+        <p>Total Cuotas: <span id="totalCuotas"></span></p>
+        <p>Total Interés: <span id="totalInteres"></span></p>
+        <p>Total Seguro: <span id="totalSeguro"></span></p>
+        <p>Total a Pagar: <span id="totalPagar"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

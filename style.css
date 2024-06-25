@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #076DA2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #055182;
+}
+
+.cronograma-container {
+  margin-top: 20px;
+}
+
+#cronogramaTable {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#cronogramaTable th, #cronogramaTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#cronogramaTable th {
+  background-color: #076DA2;
+  color: #fff;
+}
+
+#totals {
+  margin-top: 10px;
+  text-align: right;
+}
+
+#totals p {
+  margin-bottom: 5px;
+}
+
+#totals span {
+  font-weight: bold;
+}
